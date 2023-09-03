@@ -1,0 +1,9 @@
+app:
+  start_timeout: 1s
+  stop_timeout: 1s
+db:
+  host: localhost
+  port: 5432
+  user: pg
+  password: pg
+  dbname: pg
