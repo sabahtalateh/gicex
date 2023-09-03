@@ -13,7 +13,12 @@ import (
 )
 
 func main() {
-	err := gic.Init()
+	err := gic.ConfigureGlobalContainer(
+		gic.WithDump(gic.WithDumpDir("./dump")),
+	)
+	check(err)
+
+	err = gic.Init()
 	check(err)
 
 	conf, err := gic.GetE[config.Config]()
