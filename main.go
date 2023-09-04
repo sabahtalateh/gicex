@@ -21,12 +21,12 @@ func main() {
 	err = gic.Init()
 	check(err)
 
-	conf, err := gic.GetE[config.Config]()
+	conf, err := gic.Get[config.Config]()
 	check(err)
 
 	start(conf.App)
 
-	s := gic.Get[*services.SomeService]()
+	s := gic.MustGet[*services.SomeService]()
 	some, err := s.GetSome()
 	if err != nil {
 		log.Printf("err: %s", err)
