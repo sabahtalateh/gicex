@@ -14,7 +14,7 @@ import (
 func init() {
 	gic.Add[*System](
 		gic.WithInitE(func() (*System, error) {
-			dbConf := gic.Get[config.Config]().DB
+			dbConf := gic.MustGet[config.Config]().DB
 			psqlconn := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
 				dbConf.Host,
 				dbConf.Port,

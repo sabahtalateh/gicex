@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/lib/pq v1.10.9
-	github.com/sabahtalateh/gic v0.0.0-20230903141022-711f4f0a5393
+	github.com/sabahtalateh/gic v0.0.0-20230904091124-f593b7843210
 	gopkg.in/yaml.v3 v3.0.1
 )
 

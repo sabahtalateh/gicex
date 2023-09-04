@@ -8,7 +8,7 @@ import (
 func init() {
 	gic.Add[*SomeService](
 		gic.WithInit(func() *SomeService {
-			return &SomeService{r: gic.Get[*repos.SomeRepo]()}
+			return &SomeService{r: gic.MustGet[*repos.SomeRepo]()}
 		}),
 	)
 }

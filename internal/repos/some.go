@@ -9,7 +9,7 @@ import (
 func init() {
 	gic.Add[*SomeRepo](
 		gic.WithInit(func() *SomeRepo {
-			return &SomeRepo{db: gic.Get[*system.System]().DB}
+			return &SomeRepo{db: gic.MustGet[*system.System]().DB}
 		}),
 	)
 }
